@@ -3,7 +3,7 @@
 @section('container')
     <article>
         <h2>{{ $posts->title }}</h2>
-        <p>By: <a class="text-decoration-none" href="">{{ $posts->user->name }}</a> in <a class="text-decoration-none" href="/categories/{{ $posts->category->slug }}">{{ $posts->category->name }}</a></p>
+        <p>By: <a class="text-decoration-none" href="/authors/{{ $posts->author->username }}">{{ $posts->author->name }}</a> in <a class="text-decoration-none" href="/categories/{{ $posts->category->slug }}">{{ $posts->category->name }}</a></p>
         {{-- <h5>{{ $posts->author }}</h5> --}}
         {{-- {{  }} -> untuk escape html tag
         {!!  !!} -> tidak escape html tag --}}
