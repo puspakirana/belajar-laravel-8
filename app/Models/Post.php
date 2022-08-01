@@ -13,6 +13,7 @@ class Post extends Model
     // protected $fillable = ['title', 'excerpt', 'body'];
     //gaboleh diisi, sisanya boleh, biar gaperlu nulis banyak banyak
     protected $guarded = ['id'];
+    protected $with = ['author', 'category'];
 
     public function category()
     {
