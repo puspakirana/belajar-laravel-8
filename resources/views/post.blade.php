@@ -6,7 +6,7 @@
         <div class="row justify-content-center mb-5">
             <div class="col-md-8">
                 <h2>{{ $posts->title }}</h2>
-                <p>By: <a class="text-decoration-none" href="/authors/{{ $posts->author->username }}">{{ $posts->author->name }}</a> in <a class="text-decoration-none" href="/categories/{{ $posts->category->slug }}">{{ $posts->category->name }}</a></p>
+                <p>By: <a class="text-decoration-none" href="/posts?author={{ $posts->author->username }}">{{ $posts->author->name }}</a> in <a class="text-decoration-none" href="/posts?category={{ $posts->category->slug }}">{{ $posts->category->name }}</a></p>
 
                 <img src="https://source.unsplash.com/1200x400?{{ $posts->category->name }}" alt="{{ $posts->category->name }}" class="img-fluid"/>
 
@@ -20,7 +20,7 @@
                 </article>
 
 
-                <a href="/blog" class="d-block mt-3">Back to Posts</a>
+                <a href="/posts" class="d-block mt-3">Back to Posts</a>
             </div>
         </div>
     </div>
